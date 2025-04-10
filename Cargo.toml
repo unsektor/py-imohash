@@ -1,0 +1,22 @@
+[package]
+name = "imohash_rs"
+version = "0.1.0"
+edition = "2021"
+authors = ["Михаил Драгункин <contact@md.land>"]
+readme = "readme.md"
+license = "MIT"
+description = "Fast hashing for large files"
+# documentation = "https://docs.rs/imohash"
+repository = "https://github.com/unsektor/py-imohash"
+categories = ["algorithms", "filesystem", "encoding"]
+keywords = ["checksum", "digest", "hash", "murmur3", "encoding"]
+
+[lib]
+name = "imohash_rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+imohash = "0.1.2"
+pyo3 = { version = "0.24.1", features = ["extension-module", "macros"] }
+hex = "0.4.3"
+

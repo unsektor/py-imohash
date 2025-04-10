@@ -1,0 +1,33 @@
+@startuml
+
+skinparam class {
+  BackgroundColor #ebebeb
+  ArrowColor      #333
+  BorderColor     #333
+}
+
+skinparam lineType ortho
+
+package imohash_rs {
+  class Hash {
+    + __init__(self, value: int) -> None
+    ---
+    + __str__(self) -> str
+    + __int__(self) -> int
+    + __bytes__(self) -> bytes
+    ---
+    + hexdigest(self) -> str
+    + digest(self) -> bytes
+  }
+
+  class Imohash {
+    + __init__(self, sample_threshold: int = 128 * 1024, sample_size: int = 16 * 1024) -> None
+    ---
+    + get(self, data: bytes) -> Hash
+    + get_for_file(self, path: str) -> Hash
+  }
+
+  Imohash .. Hash : Creates >
+}
+
+@enduml

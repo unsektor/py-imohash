@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="344px" preserveAspectRatio="none" style="width:565px;height:344px;background:#FFFFFF;" version="1.1" viewBox="0 0 565 344" width="565px" zoomAndPan="magnify"><defs><filter height="300%" id="f1nxacgxc2zor2" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[6d4c128c72e8183fd4bf099e26f9c2c6]
+cluster imohash_rs--><polygon fill="#FFFFFF" filter="url(#f1nxacgxc2zor2)" points="16,6,105,6,112,28.4883,548,28.4883,548,337.6,16,337.6,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="112" y1="28.4883" y2="28.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="83" x="20" y="21.5352">imohash_rs</text><!--MD5=[28c306b4076f36e68489037f88fdea23]
+class Hash--><rect codeLine="11" fill="#EBEBEB" filter="url(#f1nxacgxc2zor2)" height="133.7305" id="Hash" style="stroke:#333333;stroke-width:1.5;" width="197" x="183.5" y="187.87"/><ellipse cx="263.25" cy="203.87" fill="#ADD1B2" rx="11" ry="11" style="stroke:#333333;stroke-width:1.0;"/><path d="M265.7231,210.0131 Q265.1421,210.3119 264.5029,210.4613 Q263.8638,210.6107 263.1582,210.6107 Q260.6514,210.6107 259.3315,208.9589 Q258.0117,207.307 258.0117,204.1859 Q258.0117,201.0565 259.3315,199.4047 Q260.6514,197.7528 263.1582,197.7528 Q263.8638,197.7528 264.5112,197.9022 Q265.1587,198.0516 265.7231,198.3505 L265.7231,201.0731 Q265.0923,200.4921 264.4988,200.2223 Q263.9053,199.9525 263.2744,199.9525 Q261.9297,199.9525 261.2449,201.0192 Q260.5601,202.0858 260.5601,204.1859 Q260.5601,206.2777 261.2449,207.3444 Q261.9297,208.411 263.2744,208.411 Q263.9053,208.411 264.4988,208.1412 Q265.0923,207.8715 265.7231,207.2904 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="29" x="283.75" y="208.4052">Hash</text><line style="stroke:#333333;stroke-width:1.5;" x1="184.5" x2="379.5" y1="219.87" y2="219.87"/><ellipse cx="194.5" cy="230.87" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="171" x="203.5" y="234.5048">__init__(self, value: int) -&gt; None</text><line style="stroke:#333333;stroke-width:1.0;" x1="184.5" x2="379.5" y1="240.8251" y2="240.8251"/><ellipse cx="194.5" cy="251.8251" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="102" x="203.5" y="255.4598">__str__(self) -&gt; str</text><ellipse cx="194.5" cy="264.7802" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="100" x="203.5" y="268.4149">__int__(self) -&gt; int</text><ellipse cx="194.5" cy="277.7352" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="130" x="203.5" y="281.37">__bytes__(self) -&gt; bytes</text><line style="stroke:#333333;stroke-width:1.0;" x1="184.5" x2="379.5" y1="287.6903" y2="287.6903"/><ellipse cx="194.5" cy="298.6903" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="116" x="203.5" y="302.3251">hexdigest(self) -&gt; str</text><ellipse cx="194.5" cy="311.6454" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="110" x="203.5" y="315.2802">digest(self) -&gt; bytes</text><!--MD5=[74845d44dd6daede39159f852c2674c0]
+class Imohash--><rect codeLine="22" fill="#EBEBEB" filter="url(#f1nxacgxc2zor2)" height="86.8652" id="Imohash" style="stroke:#333333;stroke-width:1.5;" width="499" x="32.5" y="41"/><ellipse cx="253.75" cy="57" fill="#ADD1B2" rx="11" ry="11" style="stroke:#333333;stroke-width:1.0;"/><path d="M256.2231,63.1431 Q255.6421,63.4419 255.0029,63.5913 Q254.3638,63.7407 253.6582,63.7407 Q251.1514,63.7407 249.8315,62.0889 Q248.5117,60.437 248.5117,57.3159 Q248.5117,54.1865 249.8315,52.5347 Q251.1514,50.8828 253.6582,50.8828 Q254.3638,50.8828 255.0112,51.0322 Q255.6587,51.1816 256.2231,51.4805 L256.2231,54.2031 Q255.5923,53.6221 254.9988,53.3523 Q254.4053,53.0825 253.7744,53.0825 Q252.4297,53.0825 251.7449,54.1492 Q251.0601,55.2158 251.0601,57.3159 Q251.0601,59.4077 251.7449,60.4744 Q252.4297,61.541 253.7744,61.541 Q254.4053,61.541 254.9988,61.2712 Q255.5923,61.0015 256.2231,60.4204 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="48" x="274.25" y="61.5352">Imohash</text><line style="stroke:#333333;stroke-width:1.5;" x1="33.5" x2="530.5" y1="73" y2="73"/><ellipse cx="43.5" cy="84" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="473" x="52.5" y="87.6348">__init__(self, sample_threshold: int = 128 * 1024, sample_size: int = 16 * 1024) -&gt; None</text><line style="stroke:#333333;stroke-width:1.0;" x1="33.5" x2="530.5" y1="93.9551" y2="93.9551"/><ellipse cx="43.5" cy="104.9551" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="156" x="52.5" y="108.5898">get(self, data: bytes) -&gt; Hash</text><ellipse cx="43.5" cy="117.9102" fill="#84BE84" rx="3" ry="3" style="stroke:#038048;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="187" x="52.5" y="121.5449">get_for_file(self, path: str) -&gt; Hash</text><!--MD5=[fc292144b2add7a46e5edec3c61bb081]
+link Imohash to Hash--><path codeLine="29" d="M282,128.29 C282,146.33 282,167.62 282,187.55 " fill="none" id="Imohash-Hash" style="stroke:#333333;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#000000" points="225,154.5753,227.9389,145.5302,222.0611,145.5302,225,154.5753" style="stroke:#000000;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="47" x="234" y="154.4884">Creates</text><!--MD5=[57703098a59b3f9c9d76cc596fee4e64]
+@startuml
+
+skinparam class {
+  BackgroundColor #ebebeb
+  ArrowColor      #333
+  BorderColor     #333
+}
+
+skinparam lineType ortho
+
+package imohash_rs {
+  class Hash {
+    + __init__(self, value: int) -> None
+    - - -
+    + __str__(self) -> str
+    + __int__(self) -> int
+    + __bytes__(self) -> bytes
+    - - -
+    + hexdigest(self) -> str
+    + digest(self) -> bytes
+  }
+
+  class Imohash {
+    + __init__(self, sample_threshold: int = 128 * 1024, sample_size: int = 16 * 1024) -> None
+    - - -
+    + get(self, data: bytes) -> Hash
+    + get_for_file(self, path: str) -> Hash
+  }
+
+  Imohash .. Hash : Creates >
+}
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 19:16:42 MSK 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: ru
+Country: RU
+--></g></svg>
