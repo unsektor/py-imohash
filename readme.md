@@ -35,6 +35,17 @@ The original project created by [Jim Kalafut](https://github.com/kalafut), check
 pip install imohash_rs
 ```
 
+> [!NOTE]
+> Since underlying module requires compilation, 
+> suitable release for some platforms may not be published
+> 
+> ```
+> $ pip install imohash_rs
+> ERROR: Could not find a version that satisfies the requirement imohash_rs (from versions: none)
+> ```
+> 
+> In this case [manual build and installation](#development--build) is required.
+
 ## Architecture overview
 
 [![architecture overview, UML class diagram](docs/_static/architecture-overview.class-diagram.svg)](docs/_static/architecture-overview.class-diagram.svg)
@@ -135,7 +146,7 @@ Application options:
    ```sh
    python3 -m imohash_rs -i  # ... or implicitly: python3 -m imohash_rs
    ```
-   
+
    ```
    Interactive mode (format: hex)
    > example
@@ -145,21 +156,39 @@ Application options:
    >
    ```
 
-## Development
+## Development & Build
 
-```sh
-## initial setup
-python3 -m venv venv
-python3 -m pip install -r requirements.lock
+1. [Install Rust](https://www.rust-lang.org/tools/install) 
+2. Build wheel package with maturin:
 
-## development
-source venv/bin/activate
-maturin develop
-# maturin develop --release --strip
+   ```sh
+   ## initial setup
+   python3 -m venv venv
+   source venv/bin/activate
+   python3 -m pip install -r requirements-dev.lock
+   ```
+   1. Development build:
+      ```sh
+      maturin develop
+      # maturin develop --release --strip
+      ```
+   2. Production build:
+      ```sh
+      maturin build --release
+      ```
+      If build is success, output will look like:
 
-## build 
-maturin build --release
-```
+      ```
+      📦 Built wheel for CPython 3.9 to /private/tmp/py-imohash/target/wheels/imohash_rs-0.1.0-cp39-cp39-macosx_10_12_x86_64.whl
+      ```
+      Then, built wheel package may be installed manually:
+
+      ```
+      (venv) $ pip install /private/tmp/py-imohash/target/wheels/imohash_rs-0.1.0-cp39-cp39-macosx_10_12_x86_64.whl
+      Processing ./target/wheels/imohash_rs-0.1.0-cp39-cp39-macosx_10_12_x86_64.whl
+      Installing collected packages: imohash-rs
+      Successfully installed imohash-rs-0.1.0
+      ```   
 
 ## Motivation
 
