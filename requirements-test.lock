@@ -1,0 +1,2 @@
+-r requirements-dev.lock
+pytest==8.3.5
