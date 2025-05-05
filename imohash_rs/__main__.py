@@ -79,7 +79,7 @@ def create_cli_parser() -> argparse.ArgumentParser:
         '-i', '--interactive',
         action='store_true',
         default=None,
-        help='Interactive hash computation mode. Conflicts with [file_path ....] argument.'
+        help='Interactive hash computation mode. Conflicts with [file_path ...] argument.'
     )
     parser.add_argument(
         'file_path',
