@@ -115,7 +115,7 @@ Application options:
 - `-s` / `--sample-size` — Sample size value. The entire file will be hashed (i.e. no sampling), if `sample_size < 1`
 - `-f` / `--format` of `{ int | bytes | hex }` — Hash representation format. Default `hex`
 - `-i` / `--interactive` — Interactive hash computation mode. **Conflicts with** `[file_path ...]` argument
-- `[file_path ...]` — File paths to compute hash of. **Conflicts with** `-i/--interactive` argument
+- `[file_path ...] | -` — File paths to compute hash of. When `-`, reads path list from STDIN. **Conflicts with** `-i/--interactive` argument
 
 **Usage example:**
 
@@ -134,7 +134,7 @@ Application options:
    # dd if=/dev/random of=/tmp/2.iso bs=1M count=64
    # cp /tmp/1.iso /tmp/3.iso
    
-   find /tmp -type f -iname '*.iso' -exec python3 -m imohash_rs {} \+
+   find /tmp -type f -iname '*.iso' | python3 -m imohash_rs -
    ```
    prints:
    ```

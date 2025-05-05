@@ -83,8 +83,12 @@ def create_cli_parser() -> argparse.ArgumentParser:
     )
     parser.add_argument(
         'file_path',
+        metavar='[file_path ...] | -',
         nargs='*',
-        help='File paths to compute hash of. Conflict with `-i/--interactive` argument.'
+        help=(
+            'File paths to compute hash of. When `-`, reads path list from STDIN. '
+            'Conflicts with `-i/--interactive` argument.'
+        )
     )
     return parser
 
@@ -120,6 +124,19 @@ def main(argument_list: typing.List[str]) -> int:
 
     import concurrent.futures
     with concurrent.futures.ThreadPoolExecutor() as pool:
+        if file_path_list == ['-']:
+            while True:
+                try:
+                    line = sys.stdin.readline()
+                except (EOFError, KeyboardInterrupt):
+                    break
+
+                if line == '':
+                    break
+
+                pool.submit(application.run, path=line.strip('\n'), format_=format_)
+            return 0
+
         for file_path in file_path_list:
             pool.submit(application.run, path=file_path, format_=format_)
     return 0
