@@ -25,16 +25,18 @@ class InteractiveApplication:
     def run(self, format_: typing.Literal['int', 'bytes', 'hex']) -> None:
         while True:
             try:
-                print(
-                    format_hash(
-                        hash_=self._imohash.get(
-                            data=input('> ').encode('utf-8')
-                        ),
-                        format_=format_
-                    )
-                )
+                data = input('> ')
             except (EOFError, KeyboardInterrupt):
                 break
+
+            print(
+                format_hash(
+                    hash_=self._imohash.get(
+                        data=data.encode('utf-8')
+                    ),
+                    format_=format_
+                )
+            )
 
 
 class FilesApplication:
