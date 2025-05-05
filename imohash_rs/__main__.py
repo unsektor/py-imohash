@@ -25,16 +25,18 @@ class InteractiveApplication:
     def run(self, format_: typing.Literal['int', 'bytes', 'hex']) -> None:
         while True:
             try:
-                print(
-                    format_hash(
-                        hash_=self._imohash.get(
-                            data=input('> ').encode('utf-8')
-                        ),
-                        format_=format_
-                    )
-                )
+                data = input('> ')
             except (EOFError, KeyboardInterrupt):
                 break
+
+            print(
+                format_hash(
+                    hash_=self._imohash.get(
+                        data=data.encode('utf-8')
+                    ),
+                    format_=format_
+                )
+            )
 
 
 class FilesApplication:
@@ -77,12 +79,16 @@ def create_cli_parser() -> argparse.ArgumentParser:
         '-i', '--interactive',
         action='store_true',
         default=None,
-        help='Interactive hash computation mode. Conflicts with [file_path ....] argument.'
+        help='Interactive hash computation mode. Conflicts with [file_path ...] argument.'
     )
     parser.add_argument(
         'file_path',
+        metavar='[file_path ...] | -',
         nargs='*',
-        help='File paths to compute hash of. Conflict with `-i/--interactive` argument.'
+        help=(
+            'File paths to compute hash of. When `-`, reads path list from STDIN. '
+            'Conflicts with `-i/--interactive` argument.'
+        )
     )
     return parser
 
@@ -118,6 +124,19 @@ def main(argument_list: typing.List[str]) -> int:
 
     import concurrent.futures
     with concurrent.futures.ThreadPoolExecutor() as pool:
+        if file_path_list == ['-']:
+            while True:
+                try:
+                    line = sys.stdin.readline()
+                except (EOFError, KeyboardInterrupt):
+                    break
+
+                if line == '':
+                    break
+
+                pool.submit(application.run, path=line.strip('\n'), format_=format_)
+            return 0
+
         for file_path in file_path_list:
             pool.submit(application.run, path=file_path, format_=format_)
     return 0
